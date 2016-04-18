@@ -12,6 +12,14 @@
     <com.andy.component.PhotoSelectorGridView
         android:id="@+id/photo_selector"
         android:layout_width="match_parent"
-        android:numColumns="4"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:numColumns="4" />
+
+    <Button
+        android:id="@+id/commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="提交"
+        android:textSize="16dp" />
 </RelativeLayout>

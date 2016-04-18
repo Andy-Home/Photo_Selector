@@ -1,4 +1,4 @@
-package com.andy.type;
+package com.andy.util;
 
 import android.annotation.SuppressLint;
 import android.content.ContentUris;
@@ -10,8 +10,13 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
+import com.andy.adapter.PhotoSelectorAdapter;
+
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/4/1 0001.
+ * 获取文件路径
  */
 public class Path {
     @SuppressLint("NewApi")
@@ -134,5 +139,13 @@ public class Path {
      */
     public static boolean isMediaDocument(Uri uri) {
         return "com.android.providers.media.documents".equals(uri.getAuthority());
+    }
+
+
+    /**
+     * 获取图片的所有路径
+     */
+    public static List<String> getAllPaths(){
+        return PhotoSelectorAdapter.paths;
     }
 }

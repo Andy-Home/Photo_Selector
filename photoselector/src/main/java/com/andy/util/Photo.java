@@ -1,4 +1,4 @@
-package com.andy.type;
+package com.andy.util;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 
 /**
  * Created by Administrator on 2016/4/1 0001.
+ * 对图片进行处理
  */
 public class Photo {
     public static int calculateInSampleSize(
