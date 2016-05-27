@@ -1,11 +1,40 @@
-### 功能：
-* 单击照片选择器‘+’号，添加照片
-* 单击照片替换照片
-* 长按照片可以删除照片
-* 上传照片
+#PhotoSelector
 
-### 使用案例：
-***java文件***：
+## 功能 ##
+ - 单击照片选择器‘+’号，添加照片
+ - 单击照片替换照片 
+ - 长按照片可以删除照片
+ - 上传照片
+
+
+## 使用方法 ##
+
+ **Maven**
+``` maven
+ <dependency>
+  <groupId>com.andy.photoselector</groupId>
+  <artifactId>photoselector</artifactId>
+  <version>1.0.1</version>
+  <type>pom</type>
+</dependency>
+```
+
+**Gradle**
+``` gradle
+compile 'com.andy.photoselector:photoselector:1.0.1'
+```
+
+**Ivy**
+```Ivy
+<dependency org='com.andy.photoselector' name='photoselector' rev='1.0.1'>
+  <artifact name='$AID' ext='pom'></artifact>
+</dependency>
+```
+ 
+ 
+ 
+## 使用案例 ##
+**java文件**：
 ``` java
 package com.andy.test1;
 
@@ -85,7 +114,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 }
 ```
-***xml文件*** ：
+**xml文件** 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -113,17 +142,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
         android:textSize="16dp" />
 </RelativeLayout>
 ```
-### 方法：
-PhotoSelectorGridView ：继承GridView，可以像使用GridView一样使用它
+## 类方法 ##
+- PhotoSelectorGridView ：继承GridView，可以像使用GridView一样使用它
  
-PhotoSelectorAdapter ：PhotoSelectorGridView 数据源
-* void addData(Intent data) ：在回调方法中使用，当用户选择照片返回照片选择器页面后，在回调方法中使用该方法用来添加用户选择的照片
-* PhotoSelectorAdapter(Context, List<Bitmap>, PhotoSelector) ：数据源初始化
+- PhotoSelectorAdapter ：PhotoSelectorGridView 数据源
+    *  void addData(Intent data) ：在回调方法中使用，当用户选择照片返回照片选择器页面后，在回调方法中使用该方法用来添加用户选择的照片
+    * PhotoSelectorAdapter(Context, List<Bitmap>, PhotoSelector) ：数据源初始化
 
-PhotoSelector ：主要类
-* void setActivity(Activity) : 设置使用照片选择器的页面的Activity
-* Activity getActivity() : 获取设置的Activity
-* void setMaxnum(int) : 设置用户显示的最大图片数
-* int getMaxnum() : 获取用户显示的最大图片数
-* String uploadPicAndTxt(String url, Map<String, String> map) ：上传图片与文本数据
-* String uploadPic(String url) ：上传图片
+- PhotoSelector ：主要类
+    * void setActivity(Activity) : 设置使用照片选择器的页面的Activity
+    * Activity getActivity() : 获取设置的Activity
+    * void setMaxnum(int) : 设置用户显示的最大图片数
+    * int getMaxnum() : 获取用户显示的最大图片数
+    * String uploadPicAndTxt(String url, Map<String, String> map) ：上传图片与文本数据
+    * String uploadPic(String url) ：上传图片
